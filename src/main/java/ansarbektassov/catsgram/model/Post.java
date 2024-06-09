@@ -3,6 +3,8 @@ package ansarbektassov.catsgram.model;
 import java.time.Instant;
 
 public class Post {
+
+    private Long postId;
     private final String author; // автор
     private final Instant creationDate = Instant.now(); // дата создания
     private String description; // описание
@@ -12,6 +14,14 @@ public class Post {
         this.author = author;
         this.description = description;
         this.photoUrl = photoUrl;
+    }
+
+    public Long getPostId() {
+        return postId;
+    }
+
+    public void setPostId(Long postId) {
+        this.postId = postId;
     }
 
     public String getAuthor() {
